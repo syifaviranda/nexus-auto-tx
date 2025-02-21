@@ -1,4 +1,4 @@
-name: Humanity Faucet
+name: Nexus Auto TX
 on:
   schedule:
     - cron: '0 */8 * * *'
@@ -73,8 +73,8 @@ jobs:
         run: |
           git config --global user.name "$GIT_NAME"
           git config --global user.email "$GIT_EMAIL"
-          git add log.txt
-          git commit -m "Update log.txt"
+          git add log-nexus.txt
+          git commit -m "Update log-nexus.txt"
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
